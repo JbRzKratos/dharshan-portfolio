@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><script src="performance.js"></script>
+<title>Magazine Library — Priya Dharshan A</title>
+<meta content="Explore Dharshan’s magazine projects: fashion portfolios, personal stories, wedding editions and birthday magazines. Browse every available page in a focused reader." name="description"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link as="font" crossorigin="" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" rel="preload" type="font/woff2"/>
+<link href="magazines.css" rel="stylesheet"/>
+<script defer="" src="assets/magazines-data.js"></script><script defer="" src="magazines.js"></script>
+</head>
+<body>
+<div id="librarySite">
+<header class="library-nav"><a class="brand" href="index.html#work">dharshan<span>.</span></a><a class="back-link" href="index.html#work">← Back to portfolio</a><a class="nav-browse" href="#collection">Browse editions ↘</a></header>
+<main>
+<section class="library-hero">
+<div class="hero-copy"><p class="eyebrow"><span></span> THE MAGAZINE LIBRARY / KIK</p><h1>Every life.<br/>A different <em>edition.</em></h1><p class="hero-summary">Personal stories, fashion portfolios and moments worth keeping. Pick a cover, step inside, and explore the pages.</p><div class="library-stats"><span><b id="editionCount">—</b> editions</span><span><b id="pageCount">—</b> pages to explore</span><a href="#collection">Find your next read <span>↓</span></a></div></div>
+<div aria-hidden="true" class="cover-installation" id="coverInstallation"><div class="cover-halo"></div><span class="installation-note">A collection of stories, bound in design.</span></div>
+</section>
+<section class="collection" id="collection">
+<div class="collection-heading"><div><p class="eyebrow">01 / EXPLORE THE ARCHIVE</p><h2>Pick a story.</h2></div><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search magazine titles and descriptions</span><input autocomplete="off" id="magazineSearch" placeholder="Search a name or story…" type="search"/></label></div>
+<div class="collection-tools"><div aria-label="Filter editions by category" class="filters" id="categoryFilters" role="group"></div><p aria-live="polite" class="results-count" id="resultsCount"></p></div>
+<div class="magazine-grid" id="magazineGrid"></div><p class="no-results" hidden="" id="noResults">No editions match that search. Try another name or category.</p>
+<noscript><p>Please enable JavaScript to browse the page reader. You can also explore the <a href="https://drive.google.com/drive/folders/1_JM0iuSTW3-00DKTYIYjPGgx2XjD0a6f">original collection on Drive</a>.</p></noscript>
+</section>
+<section class="archive-note"><span class="note-symbol">↗</span><div><h2>From cover to closing page.</h2><p>Each edition has its own reader, page navigator and original-file link. Printed spreads are separated into individual pages for easier reading.</p><a href="https://drive.google.com/drive/folders/1_JM0iuSTW3-00DKTYIYjPGgx2XjD0a6f" rel="noopener noreferrer" target="_blank">Open the source archive ↗</a></div></section>
+</main>
+<footer class="library-footer"><span>Priya Dharshan A <span class="pink">/</span> Magazine &amp; editorial work</span><a href="mailto:dharshan2103@gmail.com">Let’s connect ↗</a></footer>
+</div>
+<dialog aria-labelledby="readerTitle" id="magazineReader">
+<div class="reader-shell">
+<header class="reader-header"><div><p class="eyebrow" id="readerCategory"></p><h2 id="readerTitle"></h2></div><button aria-label="Close magazine reader" class="close-reader" id="readerClose">✕</button></header>
+<div class="reader-toolbar"><div class="reader-modes"><button aria-pressed="false" id="toggleThumbnails">Pages</button><button aria-pressed="false" id="toggleSpread">Two-page view</button><button aria-pressed="false" id="toggleZoom">Zoom in <span aria-hidden="true">＋</span></button></div><a id="originalPage" rel="noopener noreferrer" target="_blank">View original ↗</a></div>
+<div aria-busy="false" class="reader-stage" id="readerStage"><button aria-label="Previous page" class="page-arrow prev-page" id="previousPage">←</button><div class="page-surface" id="pageSurface"></div><button aria-label="Next page" class="page-arrow next-page" id="nextPage">→</button><span class="page-loading" id="pageLoading" role="status">Loading page…</span></div>
+<div class="reader-progress"><span aria-live="polite" id="pageLabel"></span><label><span class="sr-only">Go to page</span><input id="pageSlider" max="1" min="1" type="range" value="1"/></label><span class="page-number"><b id="currentPageNumber">1</b><span id="totalPageNumber"></span></span></div>
+<div aria-label="Choose a magazine page" class="thumbnail-rail" hidden="" id="thumbnailRail"></div>
+<div class="reader-footer"><span id="readerDescription"></span><span>← → to turn pages <span class="desktop-hint">· Esc to close</span></span></div>
+</div>
+</dialog>
+<dialog aria-labelledby="filmTitle" id="filmReader"><div class="film-shell"><header class="reader-header"><div><p class="eyebrow">IN MOTION / KIK MAGAZINES</p><h2 id="filmTitle">Sri Mathy — Portfolio Film</h2></div><button aria-label="Close film reader" class="close-reader" id="filmClose">✕</button></header><div class="film-stage"><video controls="" id="portfolioFilm" playsinline="" preload="none"></video></div><div class="reader-footer"><span>The supplied portfolio presentation, optimized for on-demand playback.</span><a href="https://drive.google.com/file/d/1Ps-OPYFBBG091rN-wWAu7FkLH1YTIufu/view" rel="noopener noreferrer" target="_blank">View original video ↗</a></div></div></dialog>
+</body></html>

@@ -1,0 +1,18 @@
+Magazine library validation
+- 28 separately named magazine/layout projects; one portfolio film.
+- 365 readable pages; all 730 page images/thumbnails decoded successfully.
+- Every publication has a description and source link.
+- Reading order checked: front cover, numbered interiors, back cover where supplied.
+- No duplicate page numbers inside an edition.
+- No image referenced by the reader is missing.
+- Print-only sources rendered using psd-tools, including correct CMYK preview handling.
+- Original Photoshop files, input photographs and unused previews excluded from the website package.
+- Full reader images: 67.07 MiB across all editions.
+- All gallery covers together: 1258 KiB, loaded lazily.
+- All page-navigation thumbnails together: 2.34 MiB, requested when the page navigator opens.
+- Magazine/video assets together: 84.69 MiB.
+- The reader requests the active page/spread plus only the next page. Zoom reuses the same optimized image.
+- The film uses preload=none and downloads only on demand.
+- Browser checks passed: separate publication panels, search, category filters, page thumbnails, zoom, two-page view, first/last page bounds, Escape close, saved page links and mobile reading.
+- The 35-second portfolio film played successfully with native controls.
+- The Selected Work folder opens the library correctly. No browser errors were recorded during these checks.
